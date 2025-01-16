@@ -1,0 +1,56 @@
+* tax project monorepo
+
+this repository contains synchronized versions of the tax app's
+frontend and backend.
+
+** repository structure
+
+#+begin_example
+  tax/
+  ├── tax-front/  # frontend repository
+  └── tax-back/   # backend repository
+#+end_example
+
+** version synchronization
+
+the frontend and backend repositories are maintained as git
+submodules. version tags are used to mark compatible releases between
+the two components.
+
+*** version scheme
+
+the parent repository tag indicates verified compatible versions.
+
+example:
+- parent repo: v0.0.1
+  - tax-front: v0.1.0
+  - tax-back: v1.0.0
+
+## development workflow
+
+1. make changes in respective submodules
+2. test compatibility between frontend and backend
+3. update submodule references in parent repository
+4. tag parent repository with synchronized version
+
+*** updating submodules
+
+#+begin_src bash
+  # pull latest changes for all submodules
+  git submodule update --remote --merge
+
+  # commit updated submodule references
+  git add tax-front tax-back
+  git commit -m "update submodules to latest versions"
+#+end_src
+
+*** testing local changes
+
+1. make changes in submodule directories
+2. test compatibility
+3. commit changes in submodules first
+4. update parent repository references
+
+** deployment
+
+deploy backend, then frontend.
