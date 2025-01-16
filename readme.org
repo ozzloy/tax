@@ -58,4 +58,19 @@ example:
 
 ** deployment
 
-deploy backend, then frontend.
+1. get the latest version of the top repo
+2. checkout all submodules to what the parent repo says they should be
+
+#+begin_src bash
+  cd tax
+  git pull
+  git submodule update --init --recursive
+#+end_src
+
+*** deploy backend
+
+see the readme in the backend
+
+*** deploy frontend
+
+see the readme in the frontend
