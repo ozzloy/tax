@@ -1,0 +1,6 @@
+[submodule "tax-back"]
+	path = tax-back
+	url = https://gitea.com/ozzloy/tax-back
+[submodule "tax-front"]
+	path = tax-front
+	url = https://gitea.com/ozzloy/tax-front
