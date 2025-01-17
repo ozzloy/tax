@@ -7,8 +7,8 @@ frontend and backend.
 
 #+begin_example
   tax/
-  ├── tax-front/  # frontend repository
-  └── tax-back/   # backend repository
+  ├── front/  # frontend repository
+  └── back/   # backend repository
 #+end_example
 
 ** version synchronization
@@ -30,9 +30,6 @@ example:
 
 #+begin_src bash
   git clone --recursive <tax-url>
-  cd tax
-  git submodule init
-  git submodule update
 #+end_src
 
 *** making changes
@@ -42,24 +39,37 @@ example:
 3. update submodule references in parent repository
 
 #+begin_src bash
-  # modify tax-front and/or tax-back.
-  #  showing tax-front here
-  cd tax-front
+  # modify front and/or back.
+  #  showing front here
+  cd front
   git fetch
   # edit files
   git add <edited-files>
   git commit -m "edit files"
   git push
   cd ..
-  # confirm tax-front and tax-back still work together
-  git add tax-front
-  git commit -m "made tax-front better"
+  # confirm front and back still work together
+  git add front
+  git commit -m "made front better"
 #+end_src
 
 ** deployment
 
 1. get the latest version of the top repo
 2. checkout all submodules to what the parent repo says they should be
+
+*** new deployment
+
+get the code
+
+#+begin_src bash
+  git clone --recursive <tax-url>
+#+end_src
+
+*** update an existing deployment
+
+get the latest version of the parent repo, and the submodules at the
+versions specified by the parent repo.
 
 #+begin_src bash
   cd tax
