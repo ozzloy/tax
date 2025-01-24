@@ -29,6 +29,40 @@
 *** axios http request session management
 *** pdf-lib fills out the pdf for download
 
+* demo
+** login
+nobody cares
+** human
+  + fill in bob and laura
+  + update laura
+  + delete laura
+  + resurrect laura
+** address
+  + create
+  + update
+  + delete
+  + resurrect
+** 1040
+  + save empty
+  + change title
+  + show address options
+  + show filing status options
+  + spouse shows up as option
+  + fill in wages, withholdings
+  + download
+    + show owe
+  + fix wages
+  + download
+    + show refund
+** theme
+  + updates to match system theme light/dark
+  + log in as user to save themes
+  + create theme
+    + choose bad colors
+    + choose better colors
+    + apply the theme
+    + delete the theme, mention that it goes to random theme
+
 * tax project monorepo
 
 this repository contains synchronized versions of the tax app's
