@@ -1,3 +1,34 @@
+* help fill out tax forms
+  minimum version shown here is just for federal form 1040
+
+  fill out questions once, it will do the calculations and fill out
+  the official pdf from irs.gov.
+
+  live right now at https://tax.each.do/
+
+* tech stack
+** backend
+*** apache2
+**** reverse proxy for backend, and front
+*** systemd manages postgres
+*** letsencrypt for ssl
+*** pipenv
+*** postgres for db
+*** flask
+*** sqlalchemy
+*** talisman for https
+*** gunicorn for http requests
+*** factoryboy for generating fake data for tests
+*** pytest
+** frontend
+*** apache2
+**** reverse proxy for frontend
+*** systemd manages pm2
+*** react+vite: fast html update via virtual dom and batched dispatch
+*** redux toolkit state management
+*** axios http request session management
+*** pdf-lib fills out the pdf for download
+
 * tax project monorepo
 
 this repository contains synchronized versions of the tax app's
@@ -19,10 +50,7 @@ the two components.
 
 *** version scheme
 
-the parent repository tag indicates verified compatible versions.
-
-example:
-- parent repo, tax: v0.0.1
+each parent repository commit indicates verified compatible versions.
 
 ** development
 
