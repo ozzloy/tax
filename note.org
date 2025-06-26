@@ -1,3 +1,4 @@
+* TODO make deployment script
 * TODO make times include timezone
 ISO 8601 format (e.g. "2024-01-18T12:34:56Z")
 
